@@ -61,8 +61,8 @@ export const viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({ children }) {
-  const initialData = getDbData();
+export default async function RootLayout({ children }) {
+  const initialData = await getDbData();
 
   return (
     <html lang="en" className={`${inter.variable} ${syne.variable}`} suppressHydrationWarning>

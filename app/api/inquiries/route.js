@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getInquiries, saveInquiries } from '@/lib/db';
+import { getInquiries, updateInquiry, deleteInquiry } from '@/lib/db';
 import { verifyAuth } from '@/lib/auth';
 
 export async function GET() {
@@ -9,7 +9,7 @@ export async function GET() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const inquiries = getInquiries();
+    const inquiries = await getInquiries();
     return NextResponse.json(inquiries);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch inquiries' }, { status: 500 });
@@ -24,18 +24,12 @@ export async function PATCH(request) {
     }
 
     const { id, status, notes } = await request.json();
-    const inquiries = getInquiries();
-    const index = inquiries.findIndex((inq) => inq.id === id);
-
-    if (index === -1) {
-      return NextResponse.json({ error: 'Inquiry not found' }, { status: 404 });
+    if (!id) {
+      return NextResponse.json({ error: 'Inquiry ID is required' }, { status: 400 });
     }
 
-    if (status !== undefined) inquiries[index].status = status;
-    if (notes !== undefined) inquiries[index].notes = notes;
-
-    saveInquiries(inquiries);
-    return NextResponse.json({ message: 'Inquiry updated', inquiry: inquiries[index] });
+    await updateInquiry(id, { status, notes });
+    return NextResponse.json({ message: 'Inquiry updated successfully' });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to update inquiry' }, { status: 500 });
   }
@@ -55,10 +49,7 @@ export async function DELETE(request) {
       return NextResponse.json({ error: 'ID is required' }, { status: 400 });
     }
 
-    let inquiries = getInquiries();
-    inquiries = inquiries.filter((inq) => inq.id !== id);
-    saveInquiries(inquiries);
-
+    await deleteInquiry(id);
     return NextResponse.json({ message: 'Inquiry deleted successfully' });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to delete inquiry' }, { status: 500 });

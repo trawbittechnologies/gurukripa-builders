@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique @db.VarChar(100)
+  password  String   @db.VarChar(255)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("admins")
+}
+
+model SiteData {
+  id        String   @id @db.VarChar(50)
+  data      Json
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("site_data")
+}
+
+model Inquiry {
+  id        String   @id @db.VarChar(100)
+  name      String   @db.VarChar(255)
+  email     String?  @db.VarChar(255)
+  phone     String   @db.VarChar(100)
+  service   String?  @db.VarChar(255)
+  location  String?  @db.VarChar(255)
+  budget    String?  @db.VarChar(255)
+  message   String?  @db.Text
+  status    String?  @default("New") @db.VarChar(50)
+  notes     String?  @db.Text
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("inquiries")
+}

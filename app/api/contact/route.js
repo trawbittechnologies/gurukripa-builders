@@ -13,7 +13,7 @@ export async function POST(request) {
       );
     }
 
-    const newInquiry = addInquiry({
+    const newInquiry = await addInquiry({
       name,
       email: email || '',
       phone,

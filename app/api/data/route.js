@@ -4,7 +4,7 @@ import { verifyAuth } from '@/lib/auth';
 
 export async function GET() {
   try {
-    const data = getDbData();
+    const data = await getDbData();
     if (!data) {
       return NextResponse.json({ error: 'Database not found' }, { status: 404 });
     }
@@ -22,7 +22,7 @@ export async function PUT(request) {
     }
 
     const updatedData = await request.json();
-    const success = saveDbData(updatedData);
+    const success = await saveDbData(updatedData);
 
     if (!success) {
       return NextResponse.json({ error: 'Failed to save data' }, { status: 500 });
