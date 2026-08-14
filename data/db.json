@@ -1,0 +1,437 @@
+{
+  "company": {
+    "name": "Gurukripa Builders",
+    "tagline": "Building Visions, Constructing Reality",
+    "established": "2020",
+    "location": "Kerala, India",
+    "description": "Pioneering the future of construction with advanced engineering, premium design, and unwavering commitment to quality.",
+    "aboutHeadline": "Reliable Construction Partners",
+    "aboutQuote": "\"We don't just build structures — we create spaces where life unfolds.\"",
+    "aboutBio": "We are a team of experienced professionals committed to delivering quality construction and design solutions. Our services span the entire project lifecycle — from planning and estimating to supervision and execution. With a strong focus on precision, creativity, and customer satisfaction, we bring each project to life with attention to detail and a dedication to excellence."
+  },
+  "contact": {
+    "phone": "+91 7558988689",
+    "phoneClean": "917558988689",
+    "email": "gurukripa9070@gmail.com",
+    "address": "City Center, Cheemeni, Cheruvathur, Kerala 671313",
+    "addressShort": "City Center, Cheemeni, Cheruvathur",
+    "instagram": "https://www.instagram.com/gurukripa_builders_chmni",
+    "instagramHandle": "@gurukripa_builders_chmni",
+    "facebook": "#",
+    "twitter": "#",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.1498051377775!2d75.22915817521181!3d12.238134288013846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6a07f33e5c16060f%3A0xf743f1beb37a67ee!2sGurukripa%20builders!5e1!3m2!1sen!2sin!4v1752645500513!5m2!1sen!2sin",
+    "whatsappMessage": "Hi, I'm interested in your construction services."
+  },
+  "images": {
+    "hero": "/hero-new.png",
+    "about": "/about-new.png",
+    "logo": "/logo.png",
+    "heroVideo": "/Drone_shot_construction_site_cranes_202606251213 (1).mp4",
+    "assistantVideo": "/transparent-video (16).webm"
+  },
+  "hero": {
+    "eyebrow": "Est. 2020 · Kerala, India · Premium Construction",
+    "lines": [
+      "WE CREATE",
+      "REALITY",
+      "FROM YOUR VISION"
+    ],
+    "description": "We develop landmark real estate projects that deliver lasting value to investors and communities with uncompromised precision."
+  },
+  "stats": [
+    {
+      "id": "stat-1",
+      "icon": "Building2",
+      "value": "96+",
+      "label": "Projects\nDelivered",
+      "numeric": 96
+    },
+    {
+      "id": "stat-2",
+      "icon": "Users",
+      "value": "138+",
+      "label": "Happy\nFamilies",
+      "numeric": 138
+    },
+    {
+      "id": "stat-3",
+      "icon": "Trophy",
+      "value": "4+",
+      "label": "Years of\nExcellence",
+      "numeric": 4
+    },
+    {
+      "id": "stat-4",
+      "icon": "Star",
+      "value": "100%",
+      "label": "Client\nSatisfaction",
+      "numeric": 100
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "title": "PLANNING & ESTIMATION",
+      "slug": "planning-estimation",
+      "desc": "Detailed architectural planning and precise cost estimation for every project phase, ensuring transparency and zero budget surprises.",
+      "icon": "ClipboardList",
+      "featured": true,
+      "bullets": [
+        "3D BIM Modeling",
+        "Quantity Surveying",
+        "Material Cost Breakdown",
+        "Timeline Forecasting"
+      ]
+    },
+    {
+      "id": "srv-2",
+      "title": "SUPERVISION",
+      "slug": "supervision",
+      "desc": "Rigorous on-site engineering supervision ensuring construction follows plans precisely, maintaining highest safety and quality standards.",
+      "icon": "Ruler",
+      "featured": true,
+      "bullets": [
+        "Daily Quality Inspection",
+        "Structural Verification",
+        "Safety Protocol Compliance",
+        "Milestone Tracking"
+      ]
+    },
+    {
+      "id": "srv-3",
+      "title": "CONSTRUCTION",
+      "slug": "construction",
+      "desc": "From foundation to finishing — delivering durable, premium-grade residential and commercial structures with structural excellence.",
+      "icon": "Hammer",
+      "featured": true,
+      "bullets": [
+        "RCC Framework",
+        "Masonry & Plastering",
+        "Waterproofing Systems",
+        "Turnkey Execution"
+      ]
+    },
+    {
+      "id": "srv-4",
+      "title": "INTERIOR DESIGN",
+      "slug": "interior-design",
+      "desc": "Functional, aesthetic luxury interiors tailored to your personalized vision and contemporary lifestyle.",
+      "icon": "Home",
+      "featured": true,
+      "bullets": [
+        "Custom Modular Kitchens",
+        "False Ceilings & Lighting",
+        "Bespoke Wardrobes",
+        "Premium Material Sourcing"
+      ]
+    },
+    {
+      "id": "srv-5",
+      "title": "LANDSCAPING",
+      "slug": "landscaping",
+      "desc": "Creating lush, vibrant, sustainable outdoor environments designed to harmoniously complement your property.",
+      "icon": "Trees",
+      "featured": true,
+      "bullets": [
+        "Hardscaping & Paving",
+        "Garden Architecture",
+        "Outdoor Illumination",
+        "Automated Irrigation"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1786735024840",
+      "title": "jnxcu nx",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Kerala",
+      "src": "/uploads/1786735036547_ChatGPT_Image_Aug_15__2026__12_21_21_AM.png",
+      "featured": true,
+      "description": "gbgb vb"
+    },
+    {
+      "id": "proj-1",
+      "title": "Modern Hillside Villa",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Cheruvathur, Kerala",
+      "src": "/gallery/IMG-20250713-WA0024(1).jpg",
+      "featured": true,
+      "description": "Ultra-modern 4BHK luxury residence crafted with contemporary open-plan aesthetics and custom wood finishes."
+    },
+    {
+      "id": "proj-2",
+      "title": "Commercial Business Center",
+      "category": "commercial",
+      "categoryLabel": "Commercial Complex",
+      "location": "Cheemeni, Kerala",
+      "src": "/gallery/IMG-20250713-WA0024.jpg",
+      "featured": true,
+      "description": "State-of-the-art multi-story commercial complex designed for high structural efficiency and commercial tenancy."
+    },
+    {
+      "id": "proj-3",
+      "title": "Minimalist Living & Lounge",
+      "category": "interiors",
+      "categoryLabel": "Interior & Living",
+      "location": "Kasaragod, Kerala",
+      "src": "/gallery/IMG-20250713-WA0025.jpg",
+      "featured": true,
+      "description": "Warm ambient lighting, false ceiling detailing, and customized teakwood accents."
+    },
+    {
+      "id": "proj-4",
+      "title": "Contemporary Residence",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Kanhangad, Kerala",
+      "src": "/gallery/IMG-20250713-WA0026.jpg",
+      "featured": false,
+      "description": "Geometric exterior elevations with integrated energy efficient ventilation and green courtyards."
+    },
+    {
+      "id": "proj-5",
+      "title": "Retail Shopping Plaza",
+      "category": "commercial",
+      "categoryLabel": "Commercial Complex",
+      "location": "Payyanur, Kerala",
+      "src": "/gallery/IMG-20250713-WA0027.jpg",
+      "featured": false,
+      "description": "Modern glass facade showroom and premium retail infrastructure with ample underground parking."
+    },
+    {
+      "id": "proj-6",
+      "title": "Luxury Dining Suite",
+      "category": "interiors",
+      "categoryLabel": "Interior & Living",
+      "location": "Cheruvathur, Kerala",
+      "src": "/gallery/IMG-20250713-WA0028.jpg",
+      "featured": false,
+      "description": "High-end marble dining finishes and acoustic paneling for an intimate atmosphere."
+    },
+    {
+      "id": "proj-7",
+      "title": "Traditional Kerala Haven",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Nileshwar, Kerala",
+      "src": "/gallery/IMG-20250713-WA0029.jpg",
+      "featured": false,
+      "description": "Seamlessly blending traditional Kerala architecture with modern RCC engineering durability."
+    },
+    {
+      "id": "proj-8",
+      "title": "Corporate Office Floor",
+      "category": "commercial",
+      "categoryLabel": "Commercial Complex",
+      "location": "Cheemeni, Kerala",
+      "src": "/gallery/IMG-20250713-WA0030.jpg",
+      "featured": false,
+      "description": "Ergonomic workspace layouts with smart automation, glass cubicles, and conference hubs."
+    },
+    {
+      "id": "proj-9",
+      "title": "Master Bedroom Interior",
+      "category": "interiors",
+      "categoryLabel": "Interior & Living",
+      "location": "Kasaragod, Kerala",
+      "src": "/gallery/IMG-20250713-WA0031.jpg",
+      "featured": false,
+      "description": "Modern plush headboards, hidden ambient LED profiles, and walk-in wardrobe."
+    },
+    {
+      "id": "proj-10",
+      "title": "Eco-Friendly Suburban Villa",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Cheruvathur, Kerala",
+      "src": "/gallery/IMG-20250713-WA0032.jpg",
+      "featured": false,
+      "description": "Rainwater harvesting integrated, solar rooftop ready residential construction."
+    },
+    {
+      "id": "proj-11",
+      "title": "Grand Entrance Foyer",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Cheemeni, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.53 AM (1).jpeg",
+      "featured": false,
+      "description": "Double-height entrance with bespoke brass accents and Italian marble flooring."
+    },
+    {
+      "id": "proj-12",
+      "title": "Executive Suite",
+      "category": "commercial",
+      "categoryLabel": "Commercial Complex",
+      "location": "Kanhangad, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.53 AM (2).jpeg",
+      "featured": false,
+      "description": "Sleek executive office design with soundproof partition glass."
+    },
+    {
+      "id": "proj-13",
+      "title": "Custom Modular Kitchen",
+      "category": "interiors",
+      "categoryLabel": "Interior & Living",
+      "location": "Cheruvathur, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.53 AM (3).jpeg",
+      "featured": false,
+      "description": "Quartz countertop, soft-close Blum hardware, and integrated smart appliances."
+    },
+    {
+      "id": "proj-14",
+      "title": "Premium Family Manor",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Payyanur, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.54 AM (1).jpeg",
+      "featured": false,
+      "description": "Sprawling 3500 sq ft residence with cantilevered balcony and infinity pool deck."
+    },
+    {
+      "id": "proj-15",
+      "title": "Modern Commercial Storefront",
+      "category": "commercial",
+      "categoryLabel": "Commercial Complex",
+      "location": "Cheemeni, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.54 AM (2).jpeg",
+      "featured": false,
+      "description": "Architectural aluminum composite paneling with LED backlighting facade."
+    },
+    {
+      "id": "proj-16",
+      "title": "Home Cinema & Entertainment Hall",
+      "category": "interiors",
+      "categoryLabel": "Interior & Living",
+      "location": "Kasaragod, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.54 AM (3).jpeg",
+      "featured": false,
+      "description": "4K Atmos acoustic treatment with custom tiered recliner lounge."
+    },
+    {
+      "id": "proj-17",
+      "title": "Architectural Residence",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Cheruvathur, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.54 AM.jpeg",
+      "featured": false,
+      "description": "Monochrome modern facade with cantilevered overhangs and floor-to-ceiling glass."
+    },
+    {
+      "id": "proj-18",
+      "title": "Modern Studio Office",
+      "category": "commercial",
+      "categoryLabel": "Commercial Complex",
+      "location": "Cheemeni, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.55 AM (1).jpeg",
+      "featured": false,
+      "description": "Open industrial-modern concept office space with exposed ceiling details."
+    },
+    {
+      "id": "proj-19",
+      "title": "Luxury Bathroom Suite",
+      "category": "interiors",
+      "categoryLabel": "Interior & Living",
+      "location": "Kanhangad, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.55 AM (2).jpeg",
+      "featured": false,
+      "description": "Rain shower oasis with backlit mirrors, Hansgrohe fixtures, and matte tiles."
+    },
+    {
+      "id": "proj-20",
+      "title": "Two-Story Family Duplex",
+      "category": "residential",
+      "categoryLabel": "Residential Project",
+      "location": "Payyanur, Kerala",
+      "src": "/gallery/WhatsApp Image 2025-12-27 at 11.11.55 AM.jpeg",
+      "featured": false,
+      "description": "Smart duplex layout optimizing natural lighting and cross-ventilation."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "name": "Rajesh Kumar",
+      "role": "Villa Owner · Kasaragod",
+      "initials": "RK",
+      "stars": 5,
+      "project": "3BHK Luxury Villa",
+      "text": "Gurukripa Builders transformed our vision into a stunning family home. Their attention to detail, professional supervision, and timely delivery exceeded all our expectations. Truly world-class."
+    },
+    {
+      "id": "test-2",
+      "name": "Anitha Mohan",
+      "role": "Business Owner · Cheruvathur",
+      "initials": "AM",
+      "stars": 5,
+      "project": "Commercial Complex",
+      "text": "We contracted Gurukripa for our commercial complex and the results were outstanding. They managed the entire project seamlessly — from planning to final handover. Highly recommended."
+    },
+    {
+      "id": "test-3",
+      "name": "Suresh Nair",
+      "role": "Homeowner · Cheemeni",
+      "initials": "SN",
+      "stars": 5,
+      "project": "Interior Design",
+      "text": "The interior design team understood exactly what we wanted. Every room feels perfectly crafted. The quality of materials and workmanship is exceptional. We are beyond happy."
+    },
+    {
+      "id": "test-4",
+      "name": "Priya Varma",
+      "role": "NRI Client · Kerala",
+      "initials": "PV",
+      "stars": 5,
+      "project": "2BHK Modern Home",
+      "text": "Managing construction from abroad seemed daunting, but Gurukripa's transparent communication and regular video updates gave us complete peace of mind. The house looks incredible."
+    }
+  ],
+  "techStack": [
+    {
+      "id": "t-1",
+      "icon": "Satellite",
+      "title": "DRONE MONITORING",
+      "desc": "Real-time aerial site monitoring with HD drone footage and progress tracking.",
+      "tag": "Live"
+    },
+    {
+      "id": "t-2",
+      "icon": "Layers",
+      "title": "DIGITAL TWIN",
+      "desc": "Virtual 3D replicas of construction sites enabling remote management and analysis.",
+      "tag": "Advanced"
+    },
+    {
+      "id": "t-3",
+      "icon": "Calendar",
+      "title": "PROJECT SCHEDULING",
+      "desc": "Intelligent scheduling that dynamically adapts to weather, resources and delays.",
+      "tag": "Smart"
+    },
+    {
+      "id": "t-4",
+      "icon": "Wifi",
+      "title": "IoT CONSTRUCTION",
+      "desc": "Smart sensors monitoring structural integrity, humidity, and equipment health.",
+      "tag": "Smart"
+    },
+    {
+      "id": "t-5",
+      "icon": "Box",
+      "title": "3D PRINTING",
+      "desc": "Rapid prototyping of architectural components for faster and cost-effective builds.",
+      "tag": "Innovation"
+    },
+    {
+      "id": "t-6",
+      "icon": "Building2",
+      "title": "BIM INTEGRATION",
+      "desc": "Full Building Information Modeling for design, clash detection and coordination.",
+      "tag": "Pro"
+    }
+  ]
+}
