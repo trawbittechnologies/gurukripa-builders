@@ -2,9 +2,13 @@ import { Pool } from 'pg';
 import fs from 'fs';
 import path from 'path';
 
-const DATABASE_URL =
-  process.env.DATABASE_URL ||
-  'postgresql://neondb_owner:npg_Co0WYOtjJfD7@ep-muddy-waterfall-azyis5m2-pooler.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require';
+const DATABASE_URL = process.env.DATABASE_URL;
+
+if (!DATABASE_URL) {
+  console.error('ERROR: DATABASE_URL environment variable is not set.');
+  console.error('Run: DATABASE_URL=postgresql://... node scripts/seed-db.js');
+  process.exit(1);
+}
 
 const pool = new Pool({
   connectionString: DATABASE_URL,

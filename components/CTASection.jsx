@@ -49,13 +49,13 @@ const CTASection = () => {
           <h2 className="cta-headline">
             BUILDING
             <br />
-            <span className="gold">TOMORROW'S</span>
+            <span className="gold">TOMORROW&apos;S</span>
             <br />
             LANDMARKS.
           </h2>
 
           <p className="cta-desc">
-            Your dream project starts with a single conversation. Let's transform
+            Your dream project starts with a single conversation. Let&apos;s transform
             your vision into a lasting landmark together.
           </p>
 

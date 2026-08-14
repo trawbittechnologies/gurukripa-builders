@@ -7,8 +7,8 @@ import Link from "next/link";
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [username, setUsername] = useState("admin");
-  const [password, setPassword] = useState("gurukripa@2026");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -156,18 +156,7 @@ export default function AdminLoginPage() {
             </div>
           </div>
 
-          <div
-            style={{
-              fontSize: "0.78rem",
-              color: "var(--admin-text-secondary)",
-              background: "#F8FAFC",
-              padding: "10px 14px",
-              borderRadius: "8px",
-              border: "1px solid var(--admin-border)",
-            }}
-          >
-            💡 Default login: <strong>admin</strong> / <strong>gurukripa@2026</strong>
-          </div>
+
 
           <button
             type="submit"

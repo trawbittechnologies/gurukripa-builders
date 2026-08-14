@@ -47,19 +47,20 @@ export default function AdminSettingsPage() {
   });
 
   useEffect(() => {
-    if (data) {
-      if (data.company) setCompany((prev) => ({ ...prev, ...data.company }));
-      if (data.contact) setContact((prev) => ({ ...prev, ...data.contact }));
-      if (data.hero) {
-        setHero({
-          eyebrow: data.hero.eyebrow || "Est. 2020 · Kerala, India · Premium Construction",
-          line1: data.hero.lines?.[0] || "WE CREATE",
-          line2: data.hero.lines?.[1] || "REALITY",
-          line3: data.hero.lines?.[2] || "FROM YOUR VISION",
-          description: data.hero.description || "",
-        });
-      }
+    if (!data) return;
+    /* eslint-disable react-hooks/set-state-in-effect */
+    if (data.company) setCompany((prev) => ({ ...prev, ...data.company }));
+    if (data.contact) setContact((prev) => ({ ...prev, ...data.contact }));
+    if (data.hero) {
+      setHero({
+        eyebrow: data.hero.eyebrow || "Est. 2020 · Kerala, India · Premium Construction",
+        line1: data.hero.lines?.[0] || "WE CREATE",
+        line2: data.hero.lines?.[1] || "REALITY",
+        line3: data.hero.lines?.[2] || "FROM YOUR VISION",
+        description: data.hero.description || "",
+      });
     }
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [data]);
 
   const handleSaveAll = async (e) => {

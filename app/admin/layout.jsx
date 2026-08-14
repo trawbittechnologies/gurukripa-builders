@@ -28,36 +28,39 @@ export default function AdminLayout({ children }) {
   const isLoginPage = pathname === "/admin/login";
 
   useEffect(() => {
-    if (isLoginPage) {
-      setAuthChecked(true);
-      return;
-    }
+    (async () => {
+      if (isLoginPage) {
+        setAuthChecked(true);
+        return;
+      }
 
-    // Check authentication
-    fetch("/api/auth/check")
-      .then((res) => res.json())
-      .then((data) => {
+      // Check authentication
+      try {
+        const res = await fetch("/api/auth/check");
+        const data = await res.json();
         if (!data.authenticated) {
           router.push("/admin/login");
         } else {
           setAuthChecked(true);
         }
-      })
-      .catch(() => {
+      } catch {
         router.push("/admin/login");
-      });
+      }
 
-    // Fetch unread inquiries count
-    fetch("/api/inquiries")
-      .then((res) => (res.ok ? res.json() : []))
-      .then((items) => {
+      // Fetch unread inquiries count
+      try {
+        const res = await fetch("/api/inquiries");
+        const items = res.ok ? await res.json() : [];
         if (Array.isArray(items)) {
           const newOnes = items.filter((i) => i.status === "New").length;
           setInquiryCount(newOnes);
         }
-      })
-      .catch(() => {});
-  }, [pathname, isLoginPage, router]);
+      } catch {
+        // silently ignore
+      }
+    })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname, isLoginPage]);
 
   const handleLogout = async () => {
     try {

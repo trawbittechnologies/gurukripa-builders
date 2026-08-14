@@ -156,7 +156,7 @@ const Testimonials = () => {
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
-                <span className="testimonial-quote-mark">"</span>
+                <span className="testimonial-quote-mark">&quot;</span>
                 <p className="testimonial-text">{t.text}</p>
                 <StarRating count={t.stars || 5} />
                 <div className="testimonial-author">

@@ -27,7 +27,9 @@ export function DataProvider({ children, initialData }) {
 
   useEffect(() => {
     if (!initialData) {
-      refreshData();
+      (async () => {
+        await refreshData();
+      })();
     }
   }, [initialData]);
 

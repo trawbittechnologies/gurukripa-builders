@@ -37,7 +37,7 @@ export default function AdminInquiriesPage() {
   };
 
   useEffect(() => {
-    fetchInquiries();
+    (async () => { await fetchInquiries(); })();
   }, []);
 
   const handleStatusChange = async (id, newStatus) => {
@@ -308,7 +308,7 @@ export default function AdminInquiriesPage() {
                       borderLeft: "3px solid var(--admin-primary)",
                     }}
                   >
-                    "{inq.message}"
+                    {'"'}{inq.message}{'"'}
                   </div>
                 )}
 

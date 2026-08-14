@@ -203,7 +203,7 @@ export default function AdminTestimonialsPage() {
                   fontStyle: "italic",
                 }}
               >
-                "{t.text}"
+                {'"'}{t.text}{'"'}
               </p>
             </div>
 
