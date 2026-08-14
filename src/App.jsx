@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 import StickyWhatsApp from "./components/StickyWhatsApp";
+import CharacterAssistant from "./components/CharacterAssistant";
 
 // Lazy load all sections for optimal performance
 const Stats = lazy(() => import("./components/Stats"));
@@ -112,6 +113,9 @@ function App() {
 
       {/* Sticky Floating WhatsApp Contact Action Button */}
       <StickyWhatsApp />
+
+      {/* Floating Animated Character Assistant (Transparent WebM) */}
+      <CharacterAssistant />
     </div>
   );
 }
