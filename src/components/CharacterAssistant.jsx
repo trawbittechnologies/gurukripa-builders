@@ -82,6 +82,15 @@ const CharacterAssistant = () => {
   }, [messages, isOpen, isTyping]);
 
   useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("chat-open");
+    } else {
+      document.body.classList.remove("chat-open");
+    }
+    return () => document.body.classList.remove("chat-open");
+  }, [isOpen]);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       if (!hasInteracted && !isOpen) {
         setShowBubble(false);
