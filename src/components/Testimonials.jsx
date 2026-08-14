@@ -48,10 +48,34 @@ const StarRating = ({ count = 5 }) => (
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [slideOffset, setSlideOffset] = useState(0);
   const trackRef = useRef(null);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
   const isDragging = useRef(false);
-  const startX = useRef(0);
-  const scrollStart = useRef(0);
+  const mouseStartX = useRef(0);
+
+  // Measure card width + gap dynamically
+  const updateSlideOffset = useCallback(() => {
+    if (!trackRef.current) return;
+    const firstCard = trackRef.current.querySelector(".testimonial-card");
+    if (firstCard) {
+      const cardRect = firstCard.getBoundingClientRect();
+      const style = window.getComputedStyle(firstCard);
+      const marginRight = parseFloat(style.marginRight) || 0;
+      // Gap or margin
+      const trackStyle = window.getComputedStyle(trackRef.current);
+      const gap = parseFloat(trackStyle.gap) || 24;
+      const totalOffset = cardRect.width + Math.max(marginRight, gap);
+      setSlideOffset(totalOffset);
+    }
+  }, []);
+
+  useEffect(() => {
+    updateSlideOffset();
+    window.addEventListener("resize", updateSlideOffset);
+    return () => window.removeEventListener("resize", updateSlideOffset);
+  }, [updateSlideOffset]);
 
   // Auto-play
   useEffect(() => {
@@ -71,22 +95,45 @@ const Testimonials = () => {
   const prev = () => goTo((currentIndex - 1 + testimonials.length) % testimonials.length);
   const next = () => goTo((currentIndex + 1) % testimonials.length);
 
-  // Drag / swipe
+  // Mouse Drag / Swipe
   const handleMouseDown = (e) => {
     isDragging.current = true;
-    startX.current = e.clientX;
+    mouseStartX.current = e.clientX;
     setIsAutoPlaying(false);
   };
 
   const handleMouseUp = (e) => {
     if (!isDragging.current) return;
     isDragging.current = false;
-    const diff = startX.current - e.clientX;
-    if (Math.abs(diff) > 60) {
+    const diff = mouseStartX.current - e.clientX;
+    if (Math.abs(diff) > 50) {
       diff > 0 ? next() : prev();
     }
     setTimeout(() => setIsAutoPlaying(true), 8000);
   };
+
+  // Touch Swipe
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+    setIsAutoPlaying(false);
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 40) {
+      diff > 0 ? next() : prev();
+    }
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+    setTimeout(() => setIsAutoPlaying(true), 8000);
+  };
+
+  const currentTranslateX = slideOffset > 0 ? -(currentIndex * slideOffset) : 0;
 
   return (
     <section id="testimonials" className="testimonials-section">
@@ -121,11 +168,14 @@ const Testimonials = () => {
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onMouseLeave={() => { isDragging.current = false; }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <motion.div
             className="testimonials-track"
             ref={trackRef}
-            animate={{ x: `-${currentIndex * (400 + 24)}px` }}
+            animate={{ x: currentTranslateX }}
             transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
           >
             {testimonials.map((t, i) => (

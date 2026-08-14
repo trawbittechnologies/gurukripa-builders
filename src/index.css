@@ -5008,40 +5008,835 @@ body.menu-open {
   color: var(--gold);
 }
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  .character-avatar-stage {
-    width: 120px;
-    height: 155px;
+/* ==========================================================================
+   ADVANCED MASTER RESPONSIVE SYSTEM (All Devices: 320px -> 2560px+)
+   ========================================================================== */
+
+/* Universal Overflow Protection & Touch Performance */
+html, body {
+  overflow-x: clip;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  overflow-x: clip;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
+
+/* ─── Large Desktop & Ultrawide (1440px+) ─────────────────── */
+@media (min-width: 1440px) {
+  :root {
+    --container: 1360px;
+    --section-pad: 140px;
   }
-  .character-speech-bubble {
-    width: 200px;
-    bottom: 40px;
-    left: 120px;
-    padding: 10px 12px;
+}
+
+/* ─── Laptops & Small Desktops (1025px – 1366px) ──────────── */
+@media (max-width: 1366px) {
+  :root {
+    --container: 1140px;
+    --section-pad: 110px;
   }
-  .speech-bubble-tail {
-    top: 50%;
-    left: -5px;
-    bottom: auto;
-    transform: translateY(-50%) rotate(45deg);
+
+  .section-title {
+    font-size: clamp(2.8rem, 5vw, 5rem);
   }
-  .character-hover-badge {
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%) translateY(4px);
-    font-size: 0.58rem;
-    padding: 2px 7px;
+}
+
+/* ─── Tablets Landscape (961px – 1024px) ──────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --container: 100%;
+    --section-pad: 90px;
+    --gutter: 28px;
   }
-  .character-avatar-stage:hover .character-hover-badge {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+
+  .container {
+    padding: 0 var(--gutter);
   }
-  .assistant-chat-window {
-    left: 12px;
+
+  .hero-social-strip {
+    display: none !important;
+  }
+
+  /* Grid adaptations */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-image-wrapper img {
+    height: 420px;
+    width: 100%;
+  }
+
+  .about-badge {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .innovation-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .modern-innovation-visual {
+    height: 460px;
+  }
+
+  .stat-top-right {
+    top: 20px;
+    right: 20px;
+  }
+
+  .stat-bottom-left {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .map-wrapper {
+    min-height: 380px;
+    height: 380px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* ─── Tablets Portrait & Large Mobile (769px – 960px) ─────── */
+@media (max-width: 960px) {
+  .nav-links-desktop,
+  .nav-actions-desktop {
+    display: none !important;
+  }
+
+  .nav-mobile-actions {
+    display: flex;
+  }
+
+  .nav-inner {
+    padding: 16px 20px;
+  }
+
+  .navbar.scrolled .nav-inner {
+    padding: 12px 20px;
+  }
+
+  .services-header,
+  .gallery-header,
+  .industries-header,
+  .testimonials-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .services-header .section-desc,
+  .gallery-header .section-desc,
+  .industries-header .section-desc {
+    text-align: left !important;
+    max-width: 100%;
+  }
+
+  .footer-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .footer-cta-side {
+    text-align: left;
+  }
+}
+
+/* ─── Standard Mobile (481px – 768px) ─────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --section-pad: 72px;
+    --gutter: 20px;
+  }
+
+  /* Typography scales */
+  .section-title {
+    font-size: clamp(2.2rem, 7vw, 3.8rem);
+    line-height: 0.95;
+    margin-bottom: 24px;
+  }
+
+  .section-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    min-height: 100svh;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding: 20px 0 32px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 18px;
+    gap: 10px;
+  }
+
+  .hero-eyebrow-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 9.5vw, 4.2rem);
+    line-height: 0.92;
+    margin-bottom: 24px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 0.78rem;
+  }
+
+  .hero-stats-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    position: static !important;
+    gap: 12px;
+    margin-top: 28px;
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .hero-stat-card {
+    padding: 16px 14px;
+  }
+
+  .hero-stat-card-value {
+    font-size: 1.5rem;
+  }
+
+  .hero-stat-card-label {
+    font-size: 0.7rem;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  /* Stats section */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 36px 16px;
+    text-align: center;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .stat-number-display {
+    font-size: clamp(3rem, 10vw, 4.5rem);
+  }
+
+  /* Construction Journey Single-sided Timeline */
+  .journey-timeline-container {
+    padding-left: 24px;
+    padding-right: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .journey-line-bg,
+  .journey-line-progress {
+    left: 20px !important;
+    transform: none !important;
+  }
+
+  .journey-step-row {
+    justify-content: flex-end !important;
+    width: 100%;
+  }
+
+  .journey-step-card {
+    width: calc(100% - 40px) !important;
+    margin-left: 40px;
+    padding: 24px 18px !important;
+  }
+
+  .journey-step-node {
+    left: 20px !important;
+    transform: translate(-50%, -50%) !important;
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .step-num-watermark {
+    font-size: 3.5rem !important;
+    right: 12px !important;
+    left: auto !important;
+    top: -10px !important;
+  }
+
+  .step-title {
+    font-size: 1.2rem;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+  }
+
+  /* About section */
+  .about-image-wrapper img {
+    height: 320px;
+  }
+
+  .about-badge {
+    padding: 16px 20px;
+    min-width: 120px;
     right: 12px;
     bottom: 12px;
-    width: auto;
-    height: 80vh;
+  }
+
+  .about-badge-number {
+    font-size: 3.5rem;
+  }
+
+  .about-badge-text {
+    font-size: 0.6rem;
+  }
+
+  .about-heading {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+    line-height: 0.95;
+  }
+
+  .about-pull-quote {
+    font-size: 1.1rem;
+    margin: 20px 0;
+  }
+
+  .about-features {
+    gap: 8px;
+    margin: 24px 0 32px;
+  }
+
+  .about-feature-item {
+    font-size: 0.76rem;
+    padding: 8px 14px;
+  }
+
+  /* Services cards */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 32px 24px;
+    cursor: pointer;
+  }
+
+  .service-number {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+  }
+
+  .service-icon-wrap {
+    margin-bottom: 20px;
+  }
+
+  .service-title {
+    font-size: 1.4rem;
+  }
+
+  .service-link {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    margin-top: 8px;
+  }
+
+  /* Innovation Section */
+  .modern-innovation-visual {
+    height: 340px;
+  }
+
+  .innovation-modern-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .stat-top-right {
+    top: 12px;
+    right: 12px;
+    padding: 12px 16px;
+  }
+
+  .stat-bottom-left {
+    bottom: 12px;
+    left: 12px;
+    width: 220px;
+    padding: 14px;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  /* Creative Gallery */
+  .gallery-filters {
+    gap: 8px !important;
+    margin-bottom: 24px !important;
+    overflow-x: auto;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+
+  .gallery-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-filter-btn {
+    padding: 8px 16px !important;
+    font-size: 0.72rem !important;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .gallery-slider-track {
+    height: 340px !important;
+  }
+
+  .gallery-slide-main {
+    width: 100% !important;
+    height: 280px !important;
+    border-radius: 14px;
+  }
+
+  .slide-overlay {
+    padding: 18px !important;
+  }
+
+  .slide-title {
+    font-size: 1.3rem !important;
+  }
+
+  .slide-category {
+    font-size: 0.75rem !important;
+  }
+
+  .thumb-item {
+    width: 60px !important;
+    height: 46px !important;
+  }
+
+  /* Industries & Tech */
+  .industries-grid,
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .industry-card,
+  .tech-card {
+    padding: 28px 22px;
+  }
+
+  /* Testimonials */
+  .testimonials-header {
+    gap: 16px;
+  }
+
+  .testimonial-card {
+    min-width: min(340px, calc(100vw - 40px)) !important;
+    padding: 28px 20px;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 70px 0;
+  }
+
+  .cta-headline {
+    font-size: clamp(2.2rem, 8vw, 3.8rem);
+    line-height: 0.95;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Contact & Map */
+  .contact-layout {
+    gap: 32px;
+  }
+
+  .contact-card {
+    padding: 16px;
+  }
+
+  .map-wrapper {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-bottom-right {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  /* Sticky WhatsApp FAB */
+  .sticky-whatsapp-wrapper {
+    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+    right: 16px !important;
+  }
+
+  .sticky-whatsapp-btn {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .sticky-whatsapp-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .whatsapp-tooltip {
+    display: none !important;
+  }
+}
+
+/* ─── Compact Mobile (320px – 480px) ──────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    --gutter: 16px;
+    --section-pad: 56px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .nav-inner {
+    padding: 14px 16px;
+  }
+
+  .nav-logo {
+    font-size: 1.05rem;
+  }
+
+  .nav-logo-tagline {
+    font-size: 0.55rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 11vw, 3.2rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-stats-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Journey timeline micro-alignments */
+  .journey-timeline-container {
+    padding-left: 16px;
+  }
+
+  .journey-line-bg,
+  .journey-line-progress {
+    left: 14px !important;
+  }
+
+  .journey-step-node {
+    left: 14px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .journey-step-node svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .journey-step-card {
+    width: calc(100% - 30px) !important;
+    margin-left: 30px;
+    padding: 18px 14px !important;
+  }
+
+  .step-num-watermark {
+    font-size: 2.8rem !important;
+  }
+
+  /* Gallery compact */
+  .gallery-slider-track {
+    height: 280px !important;
+  }
+
+  .gallery-slide-main {
+    height: 230px !important;
+  }
+
+  .slide-title {
+    font-size: 1.15rem !important;
+  }
+
+  /* Floating Character & Speech Bubble on Mobile */
+  .character-assistant-root {
+    left: 8px !important;
+    bottom: 0 !important;
+  }
+
+  .character-avatar-stage {
+    width: 90px !important;
+    height: 120px !important;
+  }
+
+  .character-speech-bubble {
+    width: min(240px, calc(100vw - 32px)) !important;
+    bottom: 125px !important;
+    left: 4px !important;
+    padding: 10px 12px !important;
+  }
+
+  .speech-bubble-tail {
+    top: auto !important;
+    bottom: -5px !important;
+    left: 36px !important;
+    transform: rotate(45deg) !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .character-hover-badge {
+    display: none !important;
+  }
+
+  .assistant-chat-window {
+    inset: auto 8px calc(8px + env(safe-area-inset-bottom)) 8px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: 75vh !important;
+    max-height: 540px !important;
+    border-radius: 16px !important;
+  }
+
+  /* Testimonial card */
+  .testimonial-card {
+    min-width: calc(100vw - 32px) !important;
+    padding: 24px 16px !important;
+  }
+}
+
+/* ─── Ultra Narrow Phones (e.g. Galaxy Z Fold front: < 360px) */
+@media (max-width: 360px) {
+  :root {
+    --gutter: 12px;
+    --section-pad: 48px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .about-badge {
+    padding: 12px 14px;
+    min-width: 100px;
+  }
+
+  .about-badge-number {
+    font-size: 2.8rem;
+  }
+
+  .character-avatar-stage {
+    width: 80px !important;
+    height: 105px !important;
+  }
+}
+
+/* ─── Touch Devices Optimization ──────────────────────────── */
+@media (hover: none) and (pointer: coarse) {
+  /* Ensure no custom cursor interference */
+  .cursor-dot,
+  .cursor-ring,
+  .cursor-glow {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+
+  a, button, .btn, .service-card, .contact-card, .thumb-item, .slider-btn {
+    cursor: pointer !important;
+  }
+
+  /* Smooth momentum scrolling for containers */
+  .gallery-filters,
+  .assistant-messages-container,
+  .assistant-quick-topics {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Keep links and actions visible without hover */
+  .service-link {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* Disable performance-heavy floating animations on mobile */
+  .about-badge,
+  .bp-stat-1,
+  .bp-stat-2 {
+    animation: none !important;
+  }
+}
+
+/* ─── Landscape Orientation for Mobile ────────────────────── */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+
+  .mobile-menu {
+    padding: 60px 24px 24px;
+    overflow-y: auto;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.8rem;
+    padding: 6px 0;
+  }
+
+  .assistant-chat-window {
+    height: 90vh !important;
+  }
+}
+
+/* ─── Reduced Motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

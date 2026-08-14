@@ -159,16 +159,32 @@ const Navbar = () => {
 
         <motion.div
           className="mobile-menu-footer"
-          initial={{ opacity: 0 }}
-          animate={isOpen ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ delay: 0.4, duration: 0.4 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: 0.35, duration: 0.4 }}
         >
-          <a href="tel:917558988689" className="mobile-contact-link">
-            +91 7558988689
+          <a
+            href="#contact"
+            className="btn btn-primary"
+            onClick={(e) => {
+              closeMenu();
+              e.preventDefault();
+              setTimeout(() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }, 300);
+            }}
+            style={{ width: "100%", justifyContent: "center", marginBottom: "16px" }}
+          >
+            Get a Free Quote
           </a>
-          <a href="mailto:gurukripa9070@gmail.com" className="mobile-contact-link">
-            gurukripa9070@gmail.com
-          </a>
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <a href="tel:917558988689" className="mobile-contact-link">
+              +91 7558988689
+            </a>
+            <a href="mailto:gurukripa9070@gmail.com" className="mobile-contact-link">
+              gurukripa9070@gmail.com
+            </a>
+          </div>
         </motion.div>
       </div>
     </>
