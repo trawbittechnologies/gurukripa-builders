@@ -965,9 +965,9 @@ img {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 7vw, 8rem);
+  font-size: clamp(2.6rem, 5.8vw, 7.2rem);
   letter-spacing: 0.01em;
-  line-height: 0.9;
+  line-height: 0.94;
   color: var(--text);
   margin-bottom: 48px;
   overflow: visible;
@@ -976,11 +976,17 @@ img {
 .hero-title-clip {
   overflow: hidden;
   display: block;
-  line-height: 0.95;
+  line-height: 0.98;
 }
 
 .hero-title-line {
   display: block;
+}
+
+@media (min-width: 900px) {
+  .hero-title-line {
+    white-space: nowrap;
+  }
 }
 
 .hero-title-line.gold {
@@ -4503,4 +4509,31 @@ body.menu-open {
   .tech-card {
     padding: 24px 20px;
   }
+}
+
+/* ========================================
+   STICKY WHATSAPP FAB
+   ======================================== */
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.sticky-whatsapp-btn:hover .whatsapp-tooltip {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.sticky-whatsapp-btn:hover {
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55), 0 6px 16px rgba(0, 0, 0, 0.35) !important;
 }

@@ -124,7 +124,7 @@ const Footer = () => {
               <div className="footer-contact-item">
                 <Instagram size={15} className="footer-contact-item-icon" />
                 <a
-                  href="https://www.instagram.com/gurukripa_builders_chmni"
+                  href="https://instagram.com/gurukripa_builders_chmni"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "inherit" }}
@@ -164,7 +164,7 @@ const Footer = () => {
                 <Facebook size={15} />
               </a>
               <a
-                href="https://www.instagram.com/gurukripa_builders_chmni"
+                href="https://instagram.com/gurukripa_builders_chmni"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

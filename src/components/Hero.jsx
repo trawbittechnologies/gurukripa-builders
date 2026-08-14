@@ -68,7 +68,7 @@ const addRipple = (e) => {
 };
 
 /* ─── Hero Lines ─────────────────────────── */
-const heroLines = ["WE CREATING", "REALITY", "FROM YOUR", "VISION"];
+const heroLines = ["WE CREATE", "REALITY", "FROM YOUR VISION"];
 
 /* ─── Hero Component ─────────────────────────── */
 const Hero = () => {
@@ -125,7 +125,9 @@ const Hero = () => {
           <Facebook size={20} />
         </a>
         <a
-          href="#"
+          href="https://instagram.com/gurukripa_builders_chmni"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Instagram"
           style={{ color: "var(--text-secondary)", transition: "color 0.3s" }}
           onMouseEnter={(e) => (e.currentTarget.style.color = "var(--gold)")}
@@ -167,7 +169,7 @@ const Hero = () => {
         {/* Headline — mask reveal per line */}
         <h1
           className="hero-title"
-          aria-label="Building Visions, Constructing Reality"
+          aria-label="We Create Reality From Your Vision"
         >
           {heroLines.map((line, i) => (
             <span key={i} className="hero-title-clip">

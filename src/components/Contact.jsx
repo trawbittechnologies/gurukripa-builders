@@ -28,7 +28,7 @@ const contactItems = [
     label: "Instagram",
     value: (
       <a
-        href="https://www.instagram.com/gurukripa_builders_chmni"
+        href="https://instagram.com/gurukripa_builders_chmni"
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
+import StickyWhatsApp from "./components/StickyWhatsApp";
 
 // Lazy load all sections for optimal performance
 const Stats = lazy(() => import("./components/Stats"));
@@ -108,6 +109,9 @@ function App() {
 
       {/* Footer — eager loaded */}
       <Footer />
+
+      {/* Sticky Floating WhatsApp Contact Action Button */}
+      <StickyWhatsApp />
     </div>
   );
 }
